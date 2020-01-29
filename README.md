@@ -12,7 +12,7 @@ Clone this repository and run `pip install .`
 
 ## Usage
 
-* To clone a part, run `squidbio clone [username/part-name]`
+* To clone a sequence, run `squidbio clone [seq-url]`
 
 ## Contributing
 
