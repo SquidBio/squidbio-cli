@@ -6,7 +6,7 @@ from .linter import lint
 
 def clone_seq(seq_url):
     if site_url not in seq_url or not seq_url.count('/') == 5:
-        print('Sequences are identified like {}/[user]/[project][seq_name]'.format(site_url))
+        print('Sequences are identified like {}/[user]/[project]/[seq_name]'.format(site_url))
         return
     seq = get_seq(seq_url)
     seq_name = seq_url[seq_url.rfind('/') + 1:]
