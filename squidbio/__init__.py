@@ -1,4 +1,4 @@
-from .cmds import clone_seq, lint_seq
+from .cmds import clone_seq, config, lint_seq
 
 
 class SquidBio(object):
@@ -12,3 +12,6 @@ class SquidBio(object):
 
     def clone(self, seq_string):
         clone_seq(seq_string)
+
+    def config(self):
+        config()

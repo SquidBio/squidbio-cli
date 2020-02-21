@@ -1,3 +1,6 @@
+import json
+from pathlib import Path
+
 from .api import get_seq
 from .const import site_url
 from .io import make_seq, read_seq
@@ -21,4 +24,10 @@ def lint_seq(seq_path):
 
 
 def config():
-    pass
+    api_key = input('API key: ')
+    cfg = {'api_key': api_key}
+
+    home = str(Path.home())
+    Path("{}/.squidbio".format(home)).mkdir(parents=True, exist_ok=True)
+    with open('{}/.squidbio/config.json'.format(home), 'w') as f:
+        f.write(json.dumps(cfg))
