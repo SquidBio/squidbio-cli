@@ -1,3 +1,5 @@
+import json
+
 from Bio import SeqIO
 
 
@@ -5,6 +7,8 @@ def parse_seq(seq_file, seq_type):
     seq_data = {}
     
     with open(seq_file, 'r') as f:
+        if seq_type == 'json':
+            return json.loads(f.read())
         seq = next(SeqIO.parse(f, seq_type))
 
     seq_data['name'] = seq.name
