@@ -1,5 +1,5 @@
 biopython==1.76
-certifi==2019.11.28
+certifi==2022.12.7
 chardet==3.0.4
 fire==0.2.1
 idna==2.8
